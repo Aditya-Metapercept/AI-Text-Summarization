@@ -26,3 +26,11 @@ docker run -p 8000:8000 summarizer
 ```json
 { "summary": "Summarized version here." }
 ```
+## 🌐 Optional Frontend
+Visit [http://localhost:8000](http://localhost:8000) after starting the service.
+
+## 🔮 Future Ideas
+- Multilingual support
+- User auth for tracking
+- Save summaries to DB
+- Summarize from URLs or files
