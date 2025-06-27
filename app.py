@@ -28,6 +28,7 @@ async def summarize(input: TextInput):
         logging.error("Text too short")
         raise HTTPException(status_code=400, detail="Text is too short to summarize.")
 
+
     try:
         summary = summarize_text(text)
         logging.info("summarization successfully ")
