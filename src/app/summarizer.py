@@ -24,8 +24,10 @@ except Exception as e :
     raise CustomException(e, sys)
 def summarize_text(text: str) -> str:
     try:
-        if len(text.split()) < 10:
+        if len(text.split()) < 20:
             return "Text too short to summarize."
+        if len(text.split()) >1000:
+            return "Text too long to summarize."
 
         prompt = f"Please summarize the following text and make sure the summary is easy to understand :\n\n{text}"
         response = model.generate_content(prompt)

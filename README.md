@@ -17,7 +17,19 @@ docker build -t summarizer .
 docker run -p 8000:8000 summarizer
 ```
 
-## 📬 API
+## 📬 API Testing in postman
+### **GET /**
+- **Description:** Returns a welcome message or the frontend page.
+- **Example Request:**
+  ```
+  GET http://localhost:8000/
+  ```
+- **Example Response:**
+  ```html
+  <h1>AI-Powered Text Summarization Microservice</h1>
+  ```
+
+
 **POST /summarize**
 ```json
 { "text": "Some long text to summarize..." }
@@ -31,6 +43,5 @@ Visit [http://localhost:8000](http://localhost:8000) after starting the service.
 
 ## 🔮 Future Ideas
 - Multilingual support
-- User auth for tracking
 - Save summaries to DB
 - Summarize from URLs or files

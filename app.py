@@ -14,9 +14,9 @@ class TextInput(BaseModel):
 async def home():
     if os.path.exists("static/index.html"):
         return open("static/index.html").read()
-    return "<h1>Summarizer Microservice</h1>"
+    return "<h1>AI-Powered Text Summarization Microservice</h1>"
 
-@app.post("/summarize")
+@app.post("/summarizer")
 async def summarize(input: TextInput):
     text = input.text.strip()
     logging.info(f"Request received: text_length={len(text)}")
@@ -24,9 +24,6 @@ async def summarize(input: TextInput):
     if not text:
         logging.error("Empty input text")
         raise HTTPException(status_code=400, detail="Text input is required.")
-    if len(text) < 20:
-        logging.error("Text too short")
-        raise HTTPException(status_code=400, detail="Text is too short to summarize.")
 
 
     try:
