@@ -6,20 +6,14 @@ A **FastAPI-based** microservice that uses **Gemini LLM** to summarize text. It 
 
 ## 🚀 Setup Instructions
 
-### 1. **Clone the Repository**
 
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
-
-### 2. **Install Dependencies**
+### 1. **Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. **Set Up Environment Variables**
+### 2. **Set Up Environment Variables**
 
 Create a `.env` file in the root directory:
 
@@ -29,13 +23,13 @@ GOOGLE_API_KEY=your_gemini_api_key
 
 > ⚠️ **Note:** Never commit `.env` files or API keys to your repository. Use `.gitignore` to exclude them.
 
-### 4. **Run Locally**
+### 3. **Run Locally**
 
 ```bash
 uvicorn app:app --reload
 ```
 
-### 5. **Run with Docker**
+### 4. **Run with Docker**
 
 ```bash
 docker build -t text-summarization .
