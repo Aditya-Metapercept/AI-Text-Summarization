@@ -1,6 +1,6 @@
 # 🧠 AI-Powered Text Summarization Microservice
 
-A **FastAPI-based** microservice that uses **Gemini LLM** to summarize text. It is **Dockerized** and easily deployable to **Hugging Face Spaces**.
+A **FastAPI-based** microservice that uses **Gemini LLM** to summarize text. It is **Dockerized** and easily deployable to **Render**.
 
 ---
 
@@ -131,13 +131,13 @@ Content-Type: application/json
 ## 🐳 Containerization
 
 * The app is fully Dockerized for seamless deployment.
-* Compatible with **Hugging Face Spaces** using a `Dockerfile`.
+* Compatible with **Render** using a `Dockerfile` and GitHub integration.
 
 ---
 
 ## 🔄 CI/CD
 
-* Use **GitHub Actions** to automate deployment to Hugging Face Spaces on `main` push.
+* Use **GitHub Actions** to automate deployment to **Render** on `main` push.
 
 ---
 
@@ -157,10 +157,8 @@ Content-Type: application/json
 
 ```mermaid
 flowchart TD
-    A[User / Client] <--> B(Frontend<br/>(Gradio/Streamlit on HF Spaces))
-    B --> C(FastAPI Backend<br/>(Docker on HF Spaces))
+    A[User / Client] <--> B(Frontend<br/>(Gradio/Streamlit or HTML on Render))
+    B --> C(FastAPI Backend<br/>(Docker on Render))
     C --> D(Gemini API)
     C --> E(Logging Module)
 ```
-
----
