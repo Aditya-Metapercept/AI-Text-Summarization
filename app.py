@@ -30,7 +30,9 @@ async def summarize(input: TextInput):
 
     try:
         summary = summarize_text(text)
+        logging.info("summarization successfully ")
         return {"summary": summary}
     except Exception as e:
         logging.exception("Summarization failed")
+        
         return {"summary": "Summary not available."}
