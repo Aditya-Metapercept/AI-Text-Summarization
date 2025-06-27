@@ -8,6 +8,7 @@ COPY . .
 # install the dependency 
 RUN python -m pip install -r requirements.txt
 
+
 # Expose the port fastapi will run on it
 EXPOSE 5000
 # command to run the fastapi app
