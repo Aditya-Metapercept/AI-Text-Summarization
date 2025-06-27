@@ -38,8 +38,8 @@ uvicorn app:app --reload
 ### 5. **Run with Docker**
 
 ```bash
-docker build -t summarizer .
-docker run -p 8000:8000 summarizer
+docker build -t text-summarization .
+docker run -p 8000:8000 text-summarization
 ```
 
 ---
@@ -59,7 +59,7 @@ GET http://localhost:8000/
 **Response:**
 
 ```html
-<h1>AI-Powered Text Summarization Microservice</h1>
+AI-Powered Text Summarization Microservice
 ```
 
 ---
@@ -128,37 +128,14 @@ Content-Type: application/json
 
 ---
 
-## 🐳 Containerization
 
-* The app is fully Dockerized for seamless deployment.
-* Compatible with **Render** using a `Dockerfile` and GitHub integration.
-
----
-
-## 🔄 CI/CD
-
-* Use **GitHub Actions** to automate deployment to **Render** on `main` push.
-
----
 
 ## 🌟 Future Features
 
-* [ ] **Frontend UI** – Gradio/Streamlit integration for user-friendly interaction
-* [ ] **User Authentication** – Secure the API with login/auth
 * [ ] **Batch Summarization** – Handle multiple texts in one request
 * [ ] **Multilingual Support** – Summarize in multiple languages
 * [ ] **Summary Length Control** – Customize output length
-* [ ] **Rate Limiting** – Protect API from misuse
 * [ ] **Analytics Dashboard** – View usage stats and logs
 
 ---
 
-## 📊 Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[User / Client] <--> B(Frontend<br/>(Gradio/Streamlit or HTML on Render))
-    B --> C(FastAPI Backend<br/>(Docker on Render))
-    C --> D(Gemini API)
-    C --> E(Logging Module)
-```
