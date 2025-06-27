@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, HTTPException
 from pydantic import BaseModel
-from src.app.summarizer import summarize_text
+from src.summarization.summarizer import summarize_text
 from src.logger import logging
 from fastapi.responses import HTMLResponse
 import os
