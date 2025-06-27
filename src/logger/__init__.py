@@ -11,7 +11,7 @@ BACKUP_COUNT = 3
 
 # Get project root (directory containing this script's parent directories)
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-log_path = os.path.join(project_root, LOG)
+log_path = os.path.join(os.getcwd(), LOG)
 os.makedirs(log_path, exist_ok=True)
 log_file_path = os.path.join(log_path, LOG_FILE)
 
