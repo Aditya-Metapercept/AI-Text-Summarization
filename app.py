@@ -26,6 +26,7 @@ async def summarize(input: TextInput):
         raise HTTPException(status_code=400, detail="Text input is required.")
 
 
+
     try:
         summary = summarize_text(text)
         logging.info("summarization successfully ")
