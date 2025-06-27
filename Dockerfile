@@ -8,7 +8,7 @@ COPY . .
 # install the dependency 
 RUN python -m pip install -r requirements.txt
 
-RUN mkdir -p /app/logs
+RUN mkdir -p /app/logs && chmod -R 777 /app/logs
 
 # Expose the port fastapi will run on it
 EXPOSE 5000
