@@ -5,3 +5,4 @@ pytest
 google 
 google-generativeai
 python-dotenv
+vercel-python
